@@ -43,7 +43,7 @@ The **Front JS Application** is a pure JavaScript application that acts as a Soc
    ```bash
    dotnet run
    
-3. Navigate to the `./UINodeServerApplication` folder and run the setup.sh file.
+3. Navigate to the `./UINodeServerApplication` folder and run the **'setup.sh'** file.
 4. After setup done to run the Socket Server open gitbash and type:
    ```bash
    node app.js
