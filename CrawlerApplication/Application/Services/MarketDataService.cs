@@ -42,15 +42,13 @@ namespace Application.Services
 
         public async Task<List<Symbol>> GetChangedData(List<Symbol> currentData, List<Symbol> previousData)
         {
-            var result = new List<Symbol>();
             if (previousData is null)
                 return null;
-            foreach (var currentSymbol in currentData)
-            {
-                var previousSymbol = previousData.FirstOrDefault(x => x.SymbolISIN==currentSymbol.SymbolISIN);
-                if (previousSymbol == null) continue;
-                var symbolHasChangesdData = false;
-                var symbolDiff = new Symbol
+            return (from currentSymbol in currentData
+                let previousSymbol = previousData.FirstOrDefault(x => x.SymbolISIN == currentSymbol.SymbolISIN)
+                where previousSymbol != null
+                let symbolHasChangesData = false
+                select new Symbol
                 {
                     InsCode = null,
                     SymbolISIN = currentSymbol.SymbolISIN,
@@ -65,13 +63,10 @@ namespace Application.Services
                     PE = (currentSymbol.PE == previousSymbol.PE) ? null : currentSymbol.PE,
                     YesterdayClosingPrice = (currentSymbol.YesterdayClosingPrice == previousSymbol.YesterdayClosingPrice) ? null : currentSymbol.YesterdayClosingPrice,
                     FirstTradedPrice = (currentSymbol.FirstTradedPrice == previousSymbol.FirstTradedPrice) ? null : currentSymbol.FirstTradedPrice
-                };
-                if (HasChanges(symbolDiff))
-                {
-                    result.Add(symbolDiff);
                 }
-            }
-            return result;
+                into symbolDiff
+                where HasChanges(symbolDiff)
+                select symbolDiff).ToList();
         }
 
         private static bool HasChanges(Symbol? previousSymbol)
