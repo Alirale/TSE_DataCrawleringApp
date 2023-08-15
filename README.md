@@ -1,5 +1,9 @@
 # Multi-App Data Pipeline and Real-time Monitoring System
 
+
+![image](https://github.com/Alirale/TSE_DataCrawleringApp/assets/59726045/6b2b0601-ee71-4e65-8887-81dafd2c6f0a)
+
+
 This repository contains a set of three interconnected applications that work together to create a data pipeline and real-time monitoring system. The applications are built using various technologies including .NET Core, Node.js, and pure JavaScript. Each app serves a specific purpose and collaborates with the others to achieve the overall functionality.
 <br>
 ## Application Default URLs
@@ -43,3 +47,4 @@ The **PureJSApplication** is a pure JavaScript application that acts as a Socket
 4. After setup done to run the Socket Server open gitbash and type:
    ```bash
    node app.js
+
