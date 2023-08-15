@@ -6,7 +6,7 @@ socket.on('connect', function () {
 
  socket.on('ReceiveMessage', function (symbols) {
      symbols.forEach(function (symbol) {
-         var row = document.querySelector('[data-id="' + symbol.symbolISIN + '"]');
+         var row = document.querySelector('[data-id="' + symbol.SymbolISIN + '"]');
          if (row) {
              var tds = row.querySelectorAll('td');
              if (symbol.lastTradedPrice) {
@@ -14,8 +14,8 @@ socket.on('connect', function () {
                  tds[0].classList.add("flash");
              }
 
-             if (symbol.closingPrice) {
-                 tds[1].textContent = symbol.closingPrice;
+             if (symbol.ClosingPrice) {
+                 tds[1].textContent = symbol.ClosingPrice;
                  tds[1].classList.add("flash");
              }
 
@@ -26,7 +26,7 @@ socket.on('connect', function () {
              }, 1000);
          }
      });
-    /* console.log("Received message:", symbols);*/
+    //  console.log("Received message:", symbols);
  });
 
 const table = document.querySelector('.symbolsTable');
