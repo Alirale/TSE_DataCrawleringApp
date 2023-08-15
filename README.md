@@ -31,7 +31,7 @@ The **UINodeServerApplication** is a Node.js application that serves as a Socket
 <br><br>
 ## Front Application (Pure JavaScript Application)
 
-The **PureJSApplication** is a pure JavaScript application that acts as a Socket.IO client. It connects to the UINodeServerApplication's Socket.IO server to receive real-time updates. It initially fetches data from the CrawlerApp using the API endpoint [http://localhost:11030/Symbol/v1/Get](http://localhost:11030/Symbol/v1/Get). The application then displays both the initial data and real-time updates received through the socket connection.
+The **Front JS Application** is a pure JavaScript application that acts as a Socket.IO client. It connects to the UINodeServerApplication's Socket.IO server to receive real-time updates. It initially fetches data from the CrawlerApp using the API endpoint [http://localhost:11030/Symbol/v1/Get](http://localhost:11030/Symbol/v1/Get). The application then displays both the initial data and real-time updates received through the socket connection.
 
 - **Application directory Path:** `./FrontApplication`
 
