@@ -11,6 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontApplication", "FrontAp
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrawlerApplication", "CrawlerApplication", "{CCFBB182-0B5B-4294-8703-1CADBD719618}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\TSES_cripts.sql = ..\..\TSES_cripts.sql
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UINodeServerApplication", "UINodeServerApplication", "{9C7D7508-8B02-4217-8AE4-A934850E417D}"
 	ProjectSection(SolutionItems) = preProject
