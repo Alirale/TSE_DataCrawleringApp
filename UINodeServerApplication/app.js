@@ -2,21 +2,6 @@ const amqp = require('amqplib');
 const http = require('http');
 const socketIo = require('socket.io');
 
-const socket = io('http://localhost:11031');
-
-socket.on('connect', () => {
-    console.log('Connected to Socket.io server');
-});
-
-socket.on('disconnect', () => {
-    console.log('Disconnected from Socket.io server');
-});
-
-// Listen for the 'ReceiveMessage' event and process the received data
-socket.on('ReceiveMessage', (symbols) => {
-    //console.log('Received symbols:', symbols);
-});
-
 // RabbitMQ configuration
 const rabbitMQConfig = {
   host: 'localhost',
@@ -26,7 +11,7 @@ const rabbitMQConfig = {
 };
 
 // Socket.io server configuration
-const socketIoPort = 11031;
+const socketIoPort = 15003;
 
 // Create an HTTP server
 const server = http.createServer();
