@@ -32,7 +32,7 @@ socket.on('connect', function () {
 const table = document.querySelector('.symbolsTable');
 
 function getData() {
-    fetch('http://localhost:15006/Symbol/v1/Get')
+    fetch('http://localhost:11030/Symbol/v1/Get')
         .then((res) => res.json())
         .then((data) => {
             const tbody = table.querySelector('#priceTableBody');
