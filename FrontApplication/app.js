@@ -1,5 +1,4 @@
-// Establish the socket connection
-var socket = io('http://localhost:15003');
+var socket = io('http://localhost:11031');
 
 socket.on('connect', function () {
     console.log("Connected to Socket.IO server");
@@ -20,7 +19,6 @@ socket.on('connect', function () {
                  tds[1].classList.add("flash");
              }
 
-             // Update other fields similarly
 
              setTimeout(() => {
                  tds[0].classList.remove("flash");
