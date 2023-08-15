@@ -26,7 +26,7 @@ socket.on('connect', function () {
              }, 1000);
          }
      });
-     console.log("Received message:", symbols);
+    /* console.log("Received message:", symbols);*/
  });
 
 const table = document.querySelector('.symbolsTable');
