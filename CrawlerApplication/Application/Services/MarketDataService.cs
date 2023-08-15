@@ -25,6 +25,7 @@ namespace Application.Services
                 if (!string.IsNullOrEmpty(rawMarketData))
                 {
                     var serilizedSymbols = TseSymbolSerializer.DeSerilizeSymbols(rawMarketData);
+                    serilizedSymbols.ForEach(x=>x.ClosingPrice = (Convert.ToInt32(x.ClosingPrice) + new Random().Next(-100,100)).ToString());
                     return serilizedSymbols;
                 }
                 else
